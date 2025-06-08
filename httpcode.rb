@@ -5,24 +5,24 @@
 class Httpcode < Formula
   desc "Minimal HTTP status code lookup tool support fuzzy search"
   homepage "https://github.com/lethang7794/httpcode"
-  version "0.1.11"
+  version "0.1.12"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.11/httpcode_Darwin_x86_64.tar.gz"
-      sha256 "a617f42fe4eac17c4605d1d09c55b59200f1b8ff6a59dd0e566b1fc10e171ae0"
+      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.12/httpcode_Darwin_x86_64.tar.gz"
+      sha256 "55327004a1554ca34fd1ca0f228dd00d374c26c18170a27e8cb92711b58c20c4"
 
       def install
-        generate_completions_from_executable(bin/"httpcode", "completion")
+        bin.install "httpcode"
       end
     end
     on_arm do
-      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.11/httpcode_Darwin_arm64.tar.gz"
-      sha256 "9adf0d101161470a240e0c1165bffe8698ca06704ee226446ee7ffd72d52f516"
+      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.12/httpcode_Darwin_arm64.tar.gz"
+      sha256 "57b9565c4d8cf3fe25f110b8a2d09507d7fdd3d5dfbfbe6e9df006af1ad691ae"
 
       def install
-        generate_completions_from_executable(bin/"httpcode", "completion")
+        bin.install "httpcode"
       end
     end
   end
@@ -30,24 +30,28 @@ class Httpcode < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.11/httpcode_Linux_x86_64.tar.gz"
-        sha256 "a9c2564800e6cef6e390336878066ec54174e392a900b5eb596e7f0e94225ee0"
+        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.12/httpcode_Linux_x86_64.tar.gz"
+        sha256 "6098cc4e1b929bcb35566228924afd51823aa31549be25009c72029ca752bf7d"
 
         def install
-          generate_completions_from_executable(bin/"httpcode", "completion")
+          bin.install "httpcode"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.11/httpcode_Linux_arm64.tar.gz"
-        sha256 "54d7a177cd2e419c52cd8786e5d5c7daedf2f2129fb037298b1d1b9c0a5c7d8d"
+        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.12/httpcode_Linux_arm64.tar.gz"
+        sha256 "35ea091ec0b47ab4eac57792ef3190a6f5840e5eb2f10fe3d0678934639b8190"
 
         def install
-          generate_completions_from_executable(bin/"httpcode", "completion")
+          bin.install "httpcode"
         end
       end
     end
+  end
+
+  def post_install
+    generate_completions_from_executable(bin/"httpcode", "completion")
   end
 
   test do
