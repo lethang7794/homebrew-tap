@@ -5,13 +5,13 @@
 class Httpcode < Formula
   desc "Minimal HTTP status code lookup tool support fuzzy search"
   homepage "https://github.com/lethang7794/httpcode"
-  version "0.1.14"
+  version "0.1.15"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.14/httpcode_Darwin_x86_64.tar.gz"
-      sha256 "fea03f548b05d6ced7e6f1d31c78eadfdd2ac257c60778502d696aca43801af3"
+      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.15/httpcode_Darwin_x86_64.tar.gz"
+      sha256 "4bcbe99396702dbe748602eba51cf30db586d87d4fe05a59825124d774b71df4"
 
       def install
         bin.install "httpcode"
@@ -19,8 +19,8 @@ class Httpcode < Formula
       end
     end
     on_arm do
-      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.14/httpcode_Darwin_arm64.tar.gz"
-      sha256 "7a2aecc40caa000bb7dd0a1344e73d13757144369fbef4dc68c336be3cf68f5f"
+      url "https://github.com/lethang7794/httpcode/releases/download/v0.1.15/httpcode_Darwin_arm64.tar.gz"
+      sha256 "b53136148fe8d2dffade193a18aa01cbc032d5f881d08ead4d7cde7b81052af1"
 
       def install
         bin.install "httpcode"
@@ -32,8 +32,8 @@ class Httpcode < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.14/httpcode_Linux_x86_64.tar.gz"
-        sha256 "22e0f4ad8d68f91d2ed8c89a8dd97905360f7420b4de000bf72517f063291460"
+        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.15/httpcode_Linux_x86_64.tar.gz"
+        sha256 "df519927d4bdb80423470110f96c27019e67da5247b67a5537d9f3b877ce614d"
 
         def install
           bin.install "httpcode"
@@ -43,8 +43,8 @@ class Httpcode < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.14/httpcode_Linux_arm64.tar.gz"
-        sha256 "5fe78725418d7b5139867abc6370636ba6f304d71ec0a4337f33c6b8d78bb453"
+        url "https://github.com/lethang7794/httpcode/releases/download/v0.1.15/httpcode_Linux_arm64.tar.gz"
+        sha256 "9d34749778d199bb1a2766559842543ac6264cf23769c1b850e24caadf3dc252"
 
         def install
           bin.install "httpcode"
